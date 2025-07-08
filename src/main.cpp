@@ -1,4 +1,3 @@
-#include "SDL3/SDL.h"
 #include <iostream>
 
 #include "window.hpp"
