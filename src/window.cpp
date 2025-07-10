@@ -1,6 +1,6 @@
 #include "window.hpp"
 
-#define DEBUG true
+#define DEBUG false
 
 bool GameWindow::initWindow(std::string name, int width, int height) {
     // Set instance values

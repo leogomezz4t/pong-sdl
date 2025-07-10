@@ -4,7 +4,7 @@
 #include "color.hpp"
 #include "window.hpp"
 
-#define TILE_SIZE 10
+#define TILE_SIZE 5
 
 // COLORS
 #define BLACK_REPR 0

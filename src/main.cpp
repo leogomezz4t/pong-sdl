@@ -13,7 +13,7 @@ int main(int argc, char** argv) {
         return -1;
     }
 
-    TileMap map(0, 0, 50, 80);
+    TileMap map(0, 0, 100, 160);
 
     Game game(&window, &map);
     // Start loop
