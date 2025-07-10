@@ -1,9 +1,10 @@
 #include <iostream>
 
 #include "window.hpp"
+#include "game.hpp"
 
 // Game definitions
-#define GAME_TITLE "BitBoarder"
+#define GAME_TITLE "Pong"
 
 int main(int argc, char** argv) {
     GameWindow window;
@@ -12,15 +13,10 @@ int main(int argc, char** argv) {
         return -1;
     }
 
-    SDL_Event e;
-    bool quit = false;
-    while (!quit) {
-        while(SDL_PollEvent(&e)) {
-            if (e.type == SDL_EVENT_QUIT) {
-                quit = true;
-            }
-        }
-    }
+    Game game(&window);
+    // Start loop
+    game.gameLoop();
+
 
     window.closeWindow();
 }
