@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(bitboarder LANGUAGES CXX)
+project(pongsdl LANGUAGES CXX)
 
 # Make executables come out in bin
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
@@ -18,6 +18,6 @@ endif()
 
 file(GLOB sources src/*.cpp)
 
-add_executable(bitboarder ${sources})
+add_executable(pongsdl ${sources})
 
-target_link_libraries(bitboarder PRIVATE SDL3::SDL3)
+target_link_libraries(pongsdl PRIVATE SDL3::SDL3)
