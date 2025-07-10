@@ -1,5 +1,7 @@
 #include "window.hpp"
 
+#define DEBUG true
+
 bool GameWindow::initWindow(std::string name, int width, int height) {
     // Set instance values
     windowWidth = width;
@@ -33,6 +35,39 @@ void GameWindow::closeWindow() {
 
     SDL_Quit();
 }
+
+// METHODS ------------------------
+void GameWindow::drawRect(SDL_FRect *rect, Color *c) {
+    SDL_SetRenderDrawColor(renderer, c->r, c->g, c->b, c->a);
+    SDL_RenderFillRect(renderer, rect);
+    if (DEBUG) {
+        Color* g = &Color::GRAY;
+        SDL_SetRenderDrawColor(renderer, g->r, g->g, g->b, g->a);
+        SDL_RenderRect(renderer, rect);
+    }
+};
+
+void GameWindow::getRelativeMousePosition(float* mouseX, float* mouseY) {
+    // Getting mouse position
+    float mx, my;
+    SDL_MouseButtonFlags state = SDL_GetGlobalMouseState(&mx, &my);
+    // Getting window position 
+    int windowX, windowY;
+    SDL_GetWindowPosition(getSDLWindow(), &windowX, &windowY);
+    // Calculate and return relative value
+    *mouseX = mx - windowX;
+    *mouseY = my - windowY;
+}
+
+void GameWindow::resetRenderer() {
+    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+    SDL_RenderClear(renderer);
+}
+
+void GameWindow::presentRenderer() {
+    SDL_RenderPresent(renderer);
+}
+// METHODS ENDS -----------------------
 
 // GETTER/SETTER -----------------------------------------
 

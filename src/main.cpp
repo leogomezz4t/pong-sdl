@@ -13,7 +13,9 @@ int main(int argc, char** argv) {
         return -1;
     }
 
-    Game game(&window);
+    TileMap map(0, 0, 50, 80);
+
+    Game game(&window, &map);
     // Start loop
     game.gameLoop();
 
