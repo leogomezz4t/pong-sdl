@@ -68,6 +68,12 @@ SDL_Point TileMap::getClickedTile(float mouseX, float mouseY)
     return { column, row };
 }
 
+void TileMap::mapFill(uint8_t colorRepresentation) {
+    for (int i = 0; i < tileDataLength; i++)
+    {
+        tileData[i] = colorRepresentation;
+    }
+}
 // METHODS END -------------------------------
 
 // GETTER/SETTER ----------------------

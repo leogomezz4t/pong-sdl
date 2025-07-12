@@ -2,6 +2,8 @@
 
 #include "window.hpp"
 #include "tilemap.hpp"
+#include "sprite.hpp"
+#include <vector>
 
 class Game {
     // class references ---------------------
@@ -11,6 +13,10 @@ class Game {
     
     // Reference to the main tilemap
     TileMap* mainTileMap; 
+
+    // List of all sprite references
+    std::vector<Sprite*> sprites;
+    
 
     public:
 
@@ -26,4 +32,10 @@ class Game {
         Starts SDL and game event loop
     */
     void gameLoop();
+
+    // METHODS
+    /*
+        Paints sprite onto a tilemap
+    */
+    void paintSprite(Sprite* s);
 };

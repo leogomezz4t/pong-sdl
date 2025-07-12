@@ -5,10 +5,12 @@
 
 // Game definitions
 #define GAME_TITLE "Pong"
+#define WINDOW_WIDTH 800
+#define WINDOW_HEIGHT 500
 
 int main(int argc, char** argv) {
     GameWindow window;
-    if (!window.initWindow(GAME_TITLE, 800, 500)) {
+    if (!window.initWindow(GAME_TITLE, WINDOW_WIDTH, WINDOW_HEIGHT)) {
         std::cout << "Could not open window" << std::endl;
         return -1;
     }

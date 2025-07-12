@@ -51,6 +51,10 @@ class TileMap {
     */
     SDL_Point getClickedTile(float mouseX, float mouseY);
 
+    /*
+        Fills the whole tilemap with a certain color
+    */
+    void mapFill(uint8_t colorRepresentation);
 
     // METHODS END -------------------
 
