@@ -18,6 +18,8 @@ int main(int argc, char** argv) {
     TileMap map(0, 0, 100, 160);
 
     Game game(&window, &map);
+    // setup game
+    game.setup();
     // Start loop
     game.gameLoop();
 

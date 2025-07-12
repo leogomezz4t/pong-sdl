@@ -40,3 +40,6 @@ bool Sprite::isColliding(Sprite *s) {
 
     return false;
 };
+
+void Sprite::update() {};
+void Sprite::init() {};

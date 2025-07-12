@@ -2,6 +2,7 @@
 #include "window.hpp"
 #include "tilemap.hpp"
 #include "game.hpp"
+#include "sprite.hpp"
 
 Game::Game(GameWindow* wptr, TileMap* mtm) {
     window = wptr;
@@ -31,6 +32,12 @@ void Game::gameLoop() {
         mainTileMap->render(window);
         window->presentRenderer();
     }
+}
+void Game::setup() {
+    mainPaddle.init();
+    mainPaddle.position.x = 10;
+    mainPaddle.position.y = 10;
+    sprites.push_back((Sprite*) &mainPaddle);
 }
 
 void Game::paintSprite(Sprite *s) {

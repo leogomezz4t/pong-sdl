@@ -1,3 +1,4 @@
+#pragma once
 #include "SDL3/SDL.h"
 #include <vector>
 
@@ -44,4 +45,9 @@ class Sprite {
         Is called every frame
     */
    virtual void update();
+
+   /*
+        Is called on game start
+   */
+    virtual void init();
 };

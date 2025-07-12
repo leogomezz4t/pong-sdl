@@ -3,6 +3,7 @@
 #include "window.hpp"
 #include "tilemap.hpp"
 #include "sprite.hpp"
+#include "paddle.hpp"
 #include <vector>
 
 class Game {
@@ -17,6 +18,7 @@ class Game {
     // List of all sprite references
     std::vector<Sprite*> sprites;
     
+    Paddle mainPaddle; 
 
     public:
 
@@ -32,6 +34,8 @@ class Game {
         Starts SDL and game event loop
     */
     void gameLoop();
+
+    void setup();
 
     // METHODS
     /*
