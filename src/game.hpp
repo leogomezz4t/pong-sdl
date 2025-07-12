@@ -18,7 +18,8 @@ class Game {
     // List of all sprite references
     std::vector<Sprite*> sprites;
     
-    Paddle mainPaddle; 
+    Paddle leftPaddle; 
+    Paddle rightPaddle;
 
     public:
 
@@ -42,4 +43,5 @@ class Game {
         Paints sprite onto a tilemap
     */
     void paintSprite(Sprite* s);
+
 };

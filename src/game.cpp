@@ -34,10 +34,20 @@ void Game::gameLoop() {
     }
 }
 void Game::setup() {
-    mainPaddle.init();
-    mainPaddle.position.x = 10;
-    mainPaddle.position.y = 10;
-    sprites.push_back((Sprite*) &mainPaddle);
+    // setup left paddle
+    leftPaddle.init();
+    leftPaddle.position.x = 10;
+    leftPaddle.position.y = 10;
+    leftPaddle.setUpKey(SDL_SCANCODE_W);
+    leftPaddle.setDownKey(SDL_SCANCODE_S);
+    sprites.push_back((Sprite*) &leftPaddle);
+    // setup right paddle
+    rightPaddle.init();
+    rightPaddle.position.x = 790;
+    rightPaddle.position.y = 10;
+    rightPaddle.setUpKey(SDL_SCANCODE_UP);
+    rightPaddle.setDownKey(SDL_SCANCODE_DOWN);
+    sprites.push_back((Sprite*) &rightPaddle);
 }
 
 void Game::paintSprite(Sprite *s) {

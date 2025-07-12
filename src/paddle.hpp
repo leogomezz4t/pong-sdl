@@ -2,25 +2,13 @@
 #include "sprite.hpp"
 
 class Paddle : public Sprite {
+    SDL_Scancode UP_KEY;
+    SDL_Scancode DOWN_KEY;
     public:
-    void update() override {
-        // get keyboard
-        int kbLength;
-        const bool* kbState = SDL_GetKeyboardState(nullptr);
+    void update() override;
 
-        // Get up
-        if (kbState[SDL_SCANCODE_UP]) {
-            move(0, -1);
-        }
-        if (kbState[SDL_SCANCODE_DOWN]) {   
-            move(0,1);
-        }
-    };
+    void init() override;
 
-    void init() override {
-        // Add tiles
-        for (int i = 0; i < 5; i++) {
-            addTile(0, i);
-        }
-    }
+    void setUpKey(SDL_Scancode k);
+    void setDownKey(SDL_Scancode k);
 };
