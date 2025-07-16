@@ -78,10 +78,28 @@ void TileMap::mapFill(uint8_t colorRepresentation) {
 
 // GETTER/SETTER ----------------------
 Sint8 TileMap::getTileValue(int row, int column) {
+    if (row >= rows) {
+        printf("Tried to get value of a row that exceeded bounds\n");
+        return BLACK_REPR;
+    }
+    if (column >= columns) {
+        printf("Tried to get value of a column that exceeded bounds\n");
+        return BLACK_REPR;
+    }
     return tileData[column + row * columns];
 }
 
 void TileMap::setTileValue(int row, int column, Sint8 value) {
+    if (row < 0) return;
+    if (column < 0) return;
+    if (row >= rows) {
+        //printf("Tried to set value of a row that exceeded bounds\n");
+        return;
+    }
+    if (column >= columns) {
+        //printf("Tried to set value of a column that exceeded bounds\n");
+        return;
+    }
     tileData[column + row * columns] = value;
 }
 // GETTER/SETTER END ------------------
