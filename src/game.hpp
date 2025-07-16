@@ -4,6 +4,7 @@
 #include "tilemap.hpp"
 #include "sprite.hpp"
 #include "paddle.hpp"
+#include "ball.hpp"
 #include <vector>
 
 class Game {
@@ -20,6 +21,7 @@ class Game {
     
     Paddle leftPaddle; 
     Paddle rightPaddle;
+    Ball ball;
 
     public:
 

@@ -43,11 +43,19 @@ void Game::setup() {
     sprites.push_back((Sprite*) &leftPaddle);
     // setup right paddle
     rightPaddle.init();
-    rightPaddle.position.x = 790;
+    rightPaddle.position.x = 150;
     rightPaddle.position.y = 10;
     rightPaddle.setUpKey(SDL_SCANCODE_UP);
     rightPaddle.setDownKey(SDL_SCANCODE_DOWN);
     sprites.push_back((Sprite*) &rightPaddle);
+    // setup ball
+    ball.init();
+    ball.leftPaddle = &leftPaddle;
+    ball.rightPaddle = &rightPaddle;
+    ball.position.x = 80;
+    ball.position.y = 50;
+
+    sprites.push_back((Sprite*) &ball);
 }
 
 void Game::paintSprite(Sprite *s) {
