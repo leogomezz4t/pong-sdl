@@ -80,4 +80,12 @@ SDL_Renderer* GameWindow::getSDLRenderer() {
     return renderer;
 }
 
+int GameWindow::getWidth() {
+    return windowWidth;
+};
+
+int GameWindow::getHeight() {
+    return windowHeight;
+};
+
 // GETTER/SETTER ENDS ---------------------------------------

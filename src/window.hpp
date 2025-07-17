@@ -65,4 +65,9 @@ class GameWindow {
     void presentRenderer();
 
     // METHODS ENDS -------------
+    // GETTER
+    int getWidth();
+
+    int getHeight();
+    // ENDS
 };
