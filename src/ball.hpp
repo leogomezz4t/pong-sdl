@@ -4,6 +4,7 @@
 
 class Ball : public Sprite {
     public:
+    int diameter = 2;
     Sprite* leftPaddle = NULL;
     Sprite* rightPaddle = NULL;    
 

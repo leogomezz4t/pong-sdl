@@ -4,7 +4,6 @@
 
 
 void Ball::init() {
-    int diameter = 2;
     for (int i = 0;i < diameter; i++)
     {
         for (int j = 0; j < diameter; j++)
@@ -42,18 +41,10 @@ void Ball::update() {
         flipAngleY();
         deltaYRemaining++;
     }
-    if (position.y + 2 >= 100) {
+    if (position.y + diameter >= 100) {
         flipAngleY();
         deltaYRemaining--;
     }
-    /*
-    if (position.x + 2 >= 160) {
-        flipAngleX();
-    }
-    if (position.x <= 0) {
-        flipAngleX();
-    }
-        */
 
     // movement
     deltaXRemaining += speed * cosf(angle);
