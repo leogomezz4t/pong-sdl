@@ -58,24 +58,7 @@ void Ball::update() {
     // movement
     deltaXRemaining += speed * cosf(angle);
     deltaYRemaining += speed * sinf(angle);
-    printf("%F %d %d\n", angle, position.x, position.y);
-
-    if (deltaXRemaining >= 1) {
-        position.x++;
-        deltaXRemaining--;
-    }
-    if (deltaXRemaining <= -1) {
-        position.x--;
-        deltaXRemaining++;
-    }
-    if (deltaYRemaining >= 1) {
-        position.y++;
-        deltaYRemaining--;
-    }
-    if(deltaYRemaining <= -1) {
-        position.y--;
-        deltaYRemaining++;
-    }
+    Sprite::update();
 };
 void Ball::flipAngleX()
 {

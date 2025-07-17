@@ -8,14 +8,12 @@ class Ball : public Sprite {
     Sprite* rightPaddle = NULL;    
 
     // movement
-    float speed = 0.1;
+    float speed = 0.2;
     float angle;
-    float deltaXRemaining = 0;
-    float deltaYRemaining = 0;
     
-    void init() override;
+    void init();
 
-    void update() override;
+    void update();
 
     void flipAngleX();
 

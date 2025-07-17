@@ -6,6 +6,8 @@ typedef SDL_Point TileData;
 
 class Sprite {
     public:
+    float deltaXRemaining = 0;
+    float deltaYRemaining = 0;
     /*
         Collections of tiles that make up the sprite relative to a point defined by the sprite body
     */

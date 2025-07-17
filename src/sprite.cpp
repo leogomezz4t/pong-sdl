@@ -1,4 +1,5 @@
 #include "SDL3/SDL.h"
+#include <iostream>
 #include <vector>
 #include "sprite.hpp"
 
@@ -18,8 +19,8 @@ void Sprite::removeTile(int x, int y) {
 };
 
 void Sprite::move(int deltaX, int deltaY) {
-    position.x += deltaX;
-    position.y += deltaY;
+    deltaXRemaining += deltaX;
+    deltaYRemaining += deltaY;
 }
 
 bool Sprite::isColliding(Sprite *s) {
@@ -41,5 +42,24 @@ bool Sprite::isColliding(Sprite *s) {
     return false;
 };
 
-void Sprite::update() {};
+void Sprite::update() {
+    std::cout << "base" << std::endl;
+    // movement
+    if (deltaXRemaining >= 1) {
+        position.x++;
+        deltaXRemaining--;
+    }
+    if (deltaXRemaining <= -1) {
+        position.x--;
+        deltaXRemaining++;
+    }
+    if (deltaYRemaining >= 1) {
+        position.y++;
+        deltaYRemaining--;
+    }
+    if(deltaYRemaining <= -1) {
+        position.y--;
+        deltaYRemaining++;
+    }
+};
 void Sprite::init() {};

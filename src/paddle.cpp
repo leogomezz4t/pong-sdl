@@ -8,17 +8,19 @@ void Paddle::update() {
     // Get up
     if (kbState[UP_KEY])
     {
-        move(0, -1);
+        deltaYRemaining -= speed;
     }
     if (kbState[DOWN_KEY])
     {
-        move(0, 1);
+        deltaYRemaining += speed;
     }
+
+    Sprite::update();
 };
 
 void Paddle::init() {
     // Add tiles
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < length; i++)
     {
         addTile(0, i);
     }
