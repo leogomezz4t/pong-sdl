@@ -18,6 +18,10 @@ void Sprite::removeTile(int x, int y) {
     }
 };
 
+void Sprite::clearTiles() {
+    refTiles.clear();
+}
+
 void Sprite::move(int deltaX, int deltaY) {
     deltaXRemaining += deltaX;
     deltaYRemaining += deltaY;

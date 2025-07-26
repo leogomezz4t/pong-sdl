@@ -29,6 +29,11 @@ class Sprite {
     void removeTile(int x, int y);
 
     /*
+        Clears all reference tiles from sprite
+    */
+    void clearTiles();
+
+    /*
         Move sprite and it's tiles
     */
     void move(int deltaX, int deltaY);
