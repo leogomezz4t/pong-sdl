@@ -59,6 +59,10 @@ class TileMap {
     // METHODS END -------------------
 
     // GETTER/SETTER -------------------
+    int getWidth();
+
+    int getHeight();
+
     /*
         Returns the value of a tile
         Params:

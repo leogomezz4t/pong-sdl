@@ -77,6 +77,14 @@ void TileMap::mapFill(uint8_t colorRepresentation) {
 // METHODS END -------------------------------
 
 // GETTER/SETTER ----------------------
+int TileMap::getHeight() {
+    return rows;
+}
+
+int TileMap::getWidth() {
+    return columns;
+}
+
 Sint8 TileMap::getTileValue(int row, int column) {
     if (row >= rows) {
         printf("Tried to get value of a row that exceeded bounds\n");
