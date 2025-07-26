@@ -15,47 +15,115 @@ void Number::setTilesZero() {
 }
 
 void Number::setTilesOne() {
-    addTile(0, -2);
-    addTile(0, -1);
-    addTile(0, 0);
-    addTile(0, 1);
-    addTile(0, 2);
+    addTile(3, 0);
+    addTile(2, 1);
+    addTile(3, 1);
+    addTile(1, 2);
+    addTile(3, 2);
+    addTile(3, 3);
+    addTile(3, 4);
 }
 void Number::setTilesTwo() {
-    addTile(-1, -2);
-    addTile(0, -2);
-    addTile(1, -2);
-    addTile(1, -1);
-    addTile(0, 0);
-    addTile(-1, 1);
-    addTile(-1, 2);
-    addTile(0, 2);
-    addTile(1, 2);
+    addTile(1, 0);
+    addTile(2, 0);
+    addTile(0, 1);
+    addTile(3, 1);
+    addTile(2, 2);
+    addTile(1, 3);
+    addTile(0, 4);
+    addTile(1, 4);
+    addTile(2, 4);
+    addTile(3, 4);
 }
 
 void Number::setTilesThree() {
-
+    addTile(1, 0);
+    addTile(2, 0);
+    addTile(0, 1);
+    addTile(3, 1);
+    addTile(2, 2);
+    addTile(0, 3);
+    addTile(3, 3);
+    addTile(1, 4);
+    addTile(2, 4);
 }
 
 void Number::setTilesFour() {
-
+    addTile(2, 0);
+    addTile(3, 0);
+    addTile(1, 1);
+    addTile(3, 1);
+    addTile(0, 2);
+    addTile(1, 2);
+    addTile(2, 2);
+    addTile(3, 2);
+    addTile(3, 3);
+    addTile(3, 4);
 }
 
 void Number::setTilesFive() {
+    addTile(0, 0);
+    addTile(1, 0);
+    addTile(2, 0);
+    addTile(3, 0);
+    addTile(0, 1);
+    addTile(1, 1);
+    addTile(2, 1);
+    addTile(3, 2);
+    addTile(0, 3);
+    addTile(3, 3);
+    addTile(1, 4);
+    addTile(2, 4);
 
 }
 
 void Number::setTilesSix() {
-
+    addTile(2, 0);
+    addTile(1, 1);
+    addTile(0, 2);
+    addTile(1, 2);
+    addTile(2, 2);
+    addTile(0, 3);
+    addTile(3, 3);
+    addTile(1, 4);
+    addTile(2, 4);
 }
 
-void Number::setTilesSeven() {}
+void Number::setTilesSeven() {
+    addTile(0, 0);
+    addTile(1, 0);
+    addTile(2, 0);
+    addTile(3, 0);
+    addTile(3, 1);
+    addTile(2, 2);
+    addTile(1, 3);
+    addTile(0, 4);
+}
 
 void Number::setTilesEight() {
-
+    addTile(1, 0);
+    addTile(2, 0);
+    addTile(0, 1);
+    addTile(3, 1);
+    addTile(1, 2);
+    addTile(2, 2);
+    addTile(0, 3);
+    addTile(3, 3);
+    addTile(1, 4);
+    addTile(2, 4);
 }
 
-void Number::setTilesNine() {}
+void Number::setTilesNine() { 
+    addTile(1, 0);
+    addTile(2, 0);
+    addTile(0, 1);
+    addTile(3, 1);
+    addTile(1, 2);
+    addTile(2, 2);
+    addTile(3, 2);
+    addTile(2, 3);
+    addTile(1, 4);
+}
 
 void Number::setNumber(int n) {
     if (n < 0)
