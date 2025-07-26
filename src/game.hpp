@@ -27,6 +27,9 @@ class Game {
     Number leftScore;
     Number rightScore;
 
+    int leftScoreNum = 0;
+    int rightScoreNum = 0;
+
     public:
 
     /*

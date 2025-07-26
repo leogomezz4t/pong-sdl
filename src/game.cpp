@@ -29,12 +29,21 @@ void Game::gameLoop() {
         }
         // logic
         if (ball.position.x < 0) { // Left wall
-
+            // update left score
+            leftScoreNum++;
+            // reset ball
+            ball.reset();
         }
 
-        if (ball.position.x + ball.diameter > window->getWidth()) { // Right wall
-
+        if (ball.position.x + ball.diameter > mainTileMap->getWidth()) { // Right wall
+            // update right score
+            rightScoreNum++;
+            // reset ball
+            ball.reset();
         }
+        // update scoreboard
+        leftScore.setNumber(leftScoreNum);
+        rightScore.setNumber(rightScoreNum);
 
         // Finish render
         mainTileMap->render(window);
@@ -69,9 +78,15 @@ void Game::setup() {
     // left score
     leftScore.init();
     leftScore.setNumber(0);
-    leftScore.position.x = 35;
+    leftScore.position.x = 70;
     leftScore.position.y = 10;
     sprites.push_back(&leftScore);
+    // right score
+    rightScore.init();
+    rightScore.setNumber(0);
+    rightScore.position.x = 86;
+    rightScore.position.y = 10;
+    sprites.push_back(&rightScore);
 }
 
 void Game::paintSprite(Sprite *s) {
