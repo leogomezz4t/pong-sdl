@@ -47,7 +47,6 @@ bool Sprite::isColliding(Sprite *s) {
 };
 
 void Sprite::update() {
-    std::cout << "base" << std::endl;
     // movement
     if (deltaXRemaining >= 1) {
         position.x++;
