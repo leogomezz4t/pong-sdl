@@ -5,6 +5,7 @@
 #include "sprite.hpp"
 #include "paddle.hpp"
 #include "ball.hpp"
+#include "numbers.hpp"
 #include <vector>
 
 class Game {
@@ -22,6 +23,9 @@ class Game {
     Paddle leftPaddle; 
     Paddle rightPaddle;
     Ball ball;
+
+    Number leftScore;
+    Number rightScore;
 
     public:
 

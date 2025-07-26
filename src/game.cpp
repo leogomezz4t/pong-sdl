@@ -27,6 +27,14 @@ void Game::gameLoop() {
             sprite->update();
             paintSprite(sprite);
         }
+        // logic
+        if (ball.position.x < 0) { // Left wall
+
+        }
+
+        if (ball.position.x + ball.diameter > window->getWidth()) { // Right wall
+
+        }
 
         // Finish render
         mainTileMap->render(window);
@@ -56,6 +64,14 @@ void Game::setup() {
     ball.position.y = 50;
 
     sprites.push_back((Sprite*) &ball);
+
+    // Setup score board
+    // left score
+    leftScore.init();
+    leftScore.setNumber(0);
+    leftScore.position.x = 35;
+    leftScore.position.y = 10;
+    sprites.push_back(&leftScore);
 }
 
 void Game::paintSprite(Sprite *s) {
