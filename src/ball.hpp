@@ -11,6 +11,8 @@ class Ball : public Sprite {
     // movement
     float speed = 0.2;
     float angle;
+
+    void reset();
     
     void init();
 

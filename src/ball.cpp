@@ -2,6 +2,13 @@
 #include <cmath>
 #include <stdio.h>
 
+void Ball::reset() {
+    position.x = 78;
+    position.y = 48;
+    // randomize angle
+    angle = (float)rand() / RAND_MAX;
+    angle *= 2 * M_PI;
+}
 
 void Ball::init() {
     for (int i = 0;i < diameter; i++)
@@ -12,9 +19,7 @@ void Ball::init() {
         }
     }
 
-    // randomize angle
-    angle = (float)rand() / RAND_MAX;
-    angle *= 2 * M_PI;
+    reset();
 };
 
 void Ball::update() {
